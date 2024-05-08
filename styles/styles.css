@@ -1,0 +1,123 @@
+:root{
+    --navLink__textSize: clamp(14px, 4vw, 22px);
+    --principalTitleSize: clamp(1.8rem, 6vw, 3rem);
+    --principalParagraphSize: clamp(1rem, 3vw, 1.3rem);
+}
+
+*{
+    font-family: "Space Grotesk", sans-serif;
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+    /* border: red 1px solid; */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100dvh;
+    background-color: #F6F6F6;
+    /* margin: 0;  */
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 800px ;
+}
+
+.header{
+    height: auto;
+}
+
+.navBar{
+    margin-top: 10px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.navLink{
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+}
+
+
+.principalSection{
+    margin-top: 80px;
+}
+
+.principalSection img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+
+}
+
+.principalSection h1{
+    font-size: var(--principalTitleSize);
+ 
+}
+
+.principalSection p{
+    color: #1B1B1B;
+    margin: 20px 0;
+}
+
+.principalSection ul{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.principalSection ul a{
+    background-color: #2CC976;
+    color: black;
+    padding: 8px 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-top: 5 px;
+}
+
+@media (min-width:700px){
+    .principalSection ul {
+       gap: 30px;
+    }
+
+    .principalSection ul a{
+        transition: transform, background-color, .3s;
+    }
+
+    .principalSection ul a:hover{
+        background-color: #31E084;
+        color: black; 
+        transform: scale(1.1);
+    }
+
+    .principalSection p{
+        margin: 30px 0;
+    }
+
+    .navBar{
+        gap: 50px;
+    }
+
+    .navLink:hover{
+        color: #3366FF;
+        font-weight: 800;
+    }
+}
